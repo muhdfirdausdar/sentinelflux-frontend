@@ -1,0 +1,11 @@
+.footer {
+  background-color: var(--footer);
+  color: var(--foreground);
+  text-align: center;
+  align-content: center;
+  padding: 1em 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  min-height: 15vh;
+}

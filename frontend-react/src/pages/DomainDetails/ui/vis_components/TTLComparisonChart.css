@@ -1,0 +1,166 @@
+/* TTL Comparison Chart Styles */
+
+.ttl-comparison-chart-container {
+  width: 100%;
+  padding: 1.5rem;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.ttl-chart-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+}
+
+/* Custom scrollbar styling */
+.ttl-chart-scroll-wrapper::-webkit-scrollbar {
+  height: 12px;
+}
+
+.ttl-chart-scroll-wrapper::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 6px;
+}
+
+.ttl-chart-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.6);
+  border-radius: 6px;
+  border: 2px solid rgba(15, 23, 42, 0.4);
+}
+
+.ttl-chart-scroll-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.8);
+}
+
+.ttl-comparison-chart-svg {
+  display: block;
+  height: 500px;
+}
+
+/* Legend */
+.ttl-chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+}
+
+.ttl-chart-legend .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.ttl-chart-legend .legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  box-shadow: 0 0 8px rgba(34, 211, 238, 0.4);
+}
+
+/* Scroll Hint */
+.ttl-chart-scroll-hint {
+  text-align: center;
+  color: rgba(139, 92, 246, 0.8);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  background: rgba(139, 92, 246, 0.1);
+  border-radius: 0.375rem;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  animation: pulse-hint 2s ease-in-out infinite;
+}
+
+@keyframes pulse-hint {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Bars */
+.bar {
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.bar:hover {
+  opacity: 0.8;
+}
+
+.lowest-ttl-bar:hover {
+  filter: drop-shadow(0 0 8px rgba(167, 139, 250, 0.8));
+}
+
+.highest-ttl-bar:hover {
+  filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.8));
+}
+
+/* Bar Labels */
+.bar-label {
+  font-family: 'Courier New', monospace;
+  pointer-events: none;
+}
+
+/* Axes */
+.x-axis text,
+.y-axis text {
+  font-family: 'Courier New', monospace;
+}
+
+.y-axis-label {
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* No Data State */
+.ttl-chart-no-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ttl-comparison-chart-container {
+    padding: 1rem;
+  }
+
+  .ttl-comparison-chart-svg {
+    height: 400px;
+  }
+
+  .ttl-chart-legend {
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .ttl-chart-legend .legend-color {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ttl-comparison-chart-svg {
+    height: 350px;
+  }
+
+  .ttl-chart-legend {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}

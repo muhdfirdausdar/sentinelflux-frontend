@@ -1,0 +1,46 @@
+[build]
+  base = "frontend-react"
+  publish = "dist"
+  command = "npm run build"
+  functions = "../netlify/functions"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[dev]
+  functions = "netlify/functions"
+
+# Security Headers - Apply to all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Strict-Transport-Security (HSTS) - Force HTTPS for 1 year
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    
+    # X-Frame-Options - Prevent clickjacking
+    X-Frame-Options = "SAMEORIGIN"
+    
+    # X-Content-Type-Options - Prevent MIME sniffing
+    X-Content-Type-Options = "nosniff"
+    
+    # Referrer-Policy - Control referrer information
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Permissions-Policy - Control browser features
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=(), interest-cohort=()"
+    
+    # Content-Security-Policy - Prevent XSS attacks
+    # Stricter policy - requires disabling Cloudflare Insights
+    # Remove 'unsafe-inline' and 'unsafe-eval' from script-src
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://api.sentinelflux.software https://api-sf01.sentinelflux.software wss://api.sentinelflux.software wss://api-sf01.sentinelflux.software https://cdn.jsdelivr.net; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
+
+# Cache static assets for better performance
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

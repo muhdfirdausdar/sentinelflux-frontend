@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+.top10-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; 
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative; 
+  z-index: 1; 
+}
+
+.top10-page::before {
+  content: "";
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/picture/top10header.png") center/cover no-repeat;
+  background-color: #0b1220; 
+  opacity: 0.15; 
+  z-index: -1; 
+}
+
+.top10-page::after {
+  content: "";
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0b1220; 
+  z-index: -2; 
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1; 
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+}
+
+.hero-section h1 {
+  font-size: 2.6em;
+  color: #fff;
+  margin: 0;
+}
+
+.hero-section p {
+  font-size: 1.1em;
+  color: #d0d0d0;
+  margin-top: 10px;
+}
+
+.highlight {
+  color: #ff2b2b;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+/* ===== MAIN CONTENT ===== */
+.container {
+  text-align: center;
+  padding: 0px 20px;
+  margin: 0 auto 100px;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-card {
+  background-color: #121a2c;
+  border-radius: 15px;
+  padding: 30px 20px;
+  margin: -60px auto 40px;
+  position: relative; 
+  z-index: 10;
+  max-width: 800px;
+  width: 100%;
+}
+
+.title-section {
+  margin-bottom: 30px;
+}
+
+.icon {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+/* SentinelFlux Logo style */
+.icon img {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 50px auto 0; 
+}
+
+.title-section h2 {
+  font-size: 1.8em;
+  margin: 10px 0;
+}
+
+.white {
+  color: #fff;
+  font-size: 1em; /* Adjust this to change the size - use values like 0.9em, 1.2em, etc. */
+}
+
+.title-section p {
+  color: #b3b3b3;
+  font-size: 0.95em;
+}
+
+/* ===== COUNTRY LIST ===== */
+.countries {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.column {
+  flex: 0 1 350px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.country {
+  display: flex;
+  align-items: center;
+  background-color: #1a2236;
+  border-left: 6px solid #ff2b2b;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.country:hover {
+  transform: scale(1.03);
+  background-color: #202b44;
+}
+
+.country img {
+  width: 32px;
+  height: 20px;
+  margin: 0 10px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.rank {
+  color: #fff;
+  font-weight: 700;
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Small devices (≥640px) */
+@media (min-width: 40rem) {
+  .hero-section h1 {
+    font-size: 2.8em;
+  }
+  
+  .main-card {
+    padding: 20px;
+  }
+}
+
+/* Medium devices (≥768px) */
+@media (min-width: 48rem) {
+  .hero-section h1 {
+    font-size: 3em;
+  }
+  
+  .hero-section p {
+    font-size: 1.2em;
+  }
+  
+  .container {
+    padding: 0px 40px;
+  }
+  
+  .main-card {
+    padding: 30px;
+  }
+  
+  .title-section h2 {
+    font-size: 2em;
+  }
+}
+
+/* Large devices (≥1024px) */
+@media (min-width: 64rem) {
+  .hero-section {
+    height: 350px;
+  }
+  
+  .hero-section h1 {
+    font-size: 3.2em;
+  }
+  
+  .container {
+    padding: 0px 60px;
+  }
+  
+  .main-card {
+    max-width: 900px;
+    padding: 40px;
+  }
+}
+
+/* Extra large devices (≥1280px) */
+@media (min-width: 80rem) {
+  .main-card {
+    max-width: 1000px;
+  }
+  
+  .column {
+    width: 48%;
+  }
+}
+
+/* 2XL devices (≥1536px) */
+@media (min-width: 96rem) {
+  .hero-section {
+    height: 400px;
+  }
+  
+  .hero-section h1 {
+    font-size: 3.5em;
+  }
+  
+  .container {
+    max-width: 1400px;
+    padding: 0px 80px;
+  }
+  
+  .main-card {
+    max-width: 1100px;
+    padding: 50px;
+  }
+  
+  .title-section h2 {
+    font-size: 2.2em;
+  }
+  
+  .countries {
+    gap: 40px;
+  }
+}
+
+/* Mobile-first approach - Small screens (max-width: 640px) */
+@media (max-width: 40rem) {
+  .hero-section {
+    height: 250px;
+  }
+  
+  .hero-section h1 {
+    font-size: 1.8em;
+  }
+  
+  .hero-section p {
+    font-size: 0.9em;
+  }
+  
+  .container {
+    padding: 0px 15px;
+  }
+  
+  .main-card {
+    padding: 15px;
+    margin: -40px auto 20px;
+  }
+  
+  .icon img {
+    width: 70px;
+    margin: 30px auto 0;
+  }
+  
+  .title-section h2 {
+    font-size: 1.4em;
+  }
+  
+  .title-section p {
+    font-size: 0.85em;
+  }
+  
+  .countries {
+    flex-direction: column;
+  }
+  
+  .column {
+    width: 100%;
+  }
+  
+  .country {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+  
+  .country img {
+    width: 28px;
+    height: 18px;
+    margin: 0 8px;
+  }
+  
+  .rank {
+    font-size: 1em;
+  }
+}
+
+/* Tablet adjustments (between 640px and 768px) */
+@media (min-width: 40rem) and (max-width: 48rem) {
+  .countries {
+    grid-template-columns: 1fr;
+  }
+  
+  .column {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

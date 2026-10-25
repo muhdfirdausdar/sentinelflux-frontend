@@ -1,0 +1,69 @@
+{
+	"status": "good",
+	"remark": "Search successful",
+	"data": {
+		"page_data": {
+			"18700": {
+				"dom_last_seen": "2025-09-05T03:21:33.642872Z",
+				"is_malicious": true,
+				"domip_avg_ttl": 300,
+				"source_name": "Phishtank",
+				"flux_type": "unknown",
+				"domain_name": "blinq.me",
+				"num_ns": 2,
+				"num_ips": 2,
+				"domns_avg_ttl": 86400
+			},
+			"25298": {
+				"dom_last_seen": "2025-09-05T03:19:43.278562Z",
+				"is_malicious": true,
+				"domip_avg_ttl": 300,
+				"source_name": "Phishtank",
+				"flux_type": "unknown",
+				"domain_name": "app.jotform.com",
+				"num_ns": 2,
+				"num_ips": 2,
+				"domns_avg_ttl": 600
+			},
+			"25467": {
+				"dom_last_seen": "2025-09-05T03:19:13.366700Z",
+				"is_malicious": true,
+				"domip_avg_ttl": 300,
+				"source_name": "Phishtank",
+				"flux_type": "unknown",
+				"domain_name": "eu.jotform.com",
+				"num_ns": 2,
+				"num_ips": 2,
+				"domns_avg_ttl": 600
+			},
+			"25739": {
+				"dom_last_seen": "2025-09-05T03:20:51.135541Z",
+				"is_malicious": true,
+				"domip_avg_ttl": 19,
+				"source_name": "Phishtank",
+				"flux_type": "unknown",
+				"domain_name": "us9.campaign-archive.com",
+				"num_ns": 6,
+				"num_ips": 1,
+				"domns_avg_ttl": 7200
+			},
+			"27354": {
+				"dom_last_seen": "2025-09-05T03:23:10.427011Z",
+				"is_malicious": true,
+				"domip_avg_ttl": 19,
+				"source_name": "Phishtank",
+				"flux_type": "unknown",
+				"domain_name": "us4.campaign-archive.com",
+				"num_ns": 6,
+				"num_ips": 1,
+				"domns_avg_ttl": 7200
+			}
+		},
+		"data_count": 5,
+		"total_data": 29954,
+		"at_data": 6,
+		"direction" : "next",
+		"next_cursor": "ZG9tYWluX2lkPTI1NDY3Jm5leHRfaXRlbV9wb3M9MTEmZG9tX2xhc3Rfc2Vlbj0yMDI1LTA5LTA1VDAzOjE5OjEzLjM2NjcwMCswMDowMA==",
+		"prev_cursor": "ZG9tYWluX2lkPTExMTg3MCZuZXh0X2l0ZW1fcG9zPTYmZG9tX2xhc3Rfc2Vlbj0yMDI1LTA5LTA1VDAzOjI0OjEwLjY0NjA4NiswMDowMA=="
+	}
+}

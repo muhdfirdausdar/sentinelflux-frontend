@@ -1,0 +1,501 @@
+
+.about {
+  position: relative;
+  height: 60vh;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.5)),
+    url('/picture/aboutUs.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 60px;
+  gap: 15px; /* add small consistent gap between all elements */
+}
+
+/* Overlay image on top of background */
+.overlay-image {
+  width: 45%;
+  max-width: 500px;
+  z-index: 2;
+  margin-bottom: -20px; /* negative margin to bring closer to next element */
+}
+
+.sub-image {
+  width: 600px;
+  z-index: 1;
+  margin-bottom: -25px; /* negative margin to bring closer to text */
+}
+
+.about-text {
+  font-family: 'Poppins', sans-serif;
+  max-width: 900px;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 0;
+  padding: 0 20px;
+}
+
+
+
+
+
+.team {
+  background-color: #04061D; 
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.team-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.team-subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  background-color: #2a2d52;
+  padding: 20px;
+  border-radius: 12px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+}
+
+.team-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.team-name {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.team-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.team-socials a {
+  display: inline-block;
+}
+
+.social-icon {
+  width: 28px;   /* adjust size */
+  height: 28px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* zoom effect on hover */
+}
+
+
+
+
+.mission-vision {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 60px 20px;
+  background-color: #04061D; /* dark background */
+  font-family: 'Poppins', sans-serif;
+  flex-wrap: wrap; /* stack on smaller screens */
+}
+
+.mv-card {
+  width: 400px;
+  color: #fff;
+  text-align: center; /* left-align the text */
+}
+
+.mv-title {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center; /* keep title centered inside the box */
+}
+
+.mv-title.mission {
+  background-color: #3b4354; /* grey-blue */
+}
+
+.mv-title.vision {
+  background-color: #2f4c87; /* blue */
+}
+
+
+ .mv-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ccc;
+  text-align: justify; /* ✅ make the text justified */
+}
+
+
+
+
+.data-sources {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 130px;
+  background-color: #04061D; /* adjust to match your theme */
+  color: white;
+}
+
+.data-text {
+  flex: 1;
+  max-width: 40%;
+}
+
+.data-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.data-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+  font-family: 'Poppins', sans-serif;
+}
+
+.data-logos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.logo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.logo-row a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-row a img {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-row a img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+/* --- Acknowledgment Section --- */
+.acknowledgment {
+  background-color: #04061D; /* dark background */
+  color: #ffffff; /* white text */
+  padding: 60px 100px;
+  
+}
+
+.ack-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.acknowledgment h2 {
+    text-align: center;   /* Centers the heading */
+    margin-bottom: 20px;  /* Space below heading */
+    border-bottom: none; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+}
+
+.acknowledgment h3 {
+    text-align: center;   /* Centers the heading */
+    margin-bottom: 20px;  /* Space below heading */ 
+    margin-top: 100px;
+    font-family: 'Aboreto';
+    font-weight: 20;
+}
+
+.ack-content p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* --- Responsive Styling --- */
+
+/* Small devices (≥640px) */
+@media (min-width: 40rem) {
+  .about {
+    height: 55vh;
+    padding-top: 55px;
+    gap: 12px;
+  }
+  
+  .overlay-image {
+    width: 50%;
+    max-width: 400px;
+    margin-bottom: -18px;
+  }
+  
+  .sub-image {
+    width: 450px;
+    margin-bottom: -22px;
+  }
+}
+
+/* Medium devices (≥768px) */
+@media (min-width: 48rem) {
+  .team-title {
+    font-size: 2.5rem;
+  }
+  
+  .data-sources {
+    flex-direction: row;
+    padding: 80px 60px;
+  }
+  
+  .data-text {
+    max-width: 45%;
+  }
+}
+
+/* Large devices (≥1024px) */
+@media (min-width: 64rem) {
+  .about {
+    height: 60vh;
+    padding-top: 60px;
+    gap: 15px;
+  }
+  
+  .overlay-image {
+    width: 45%;
+    max-width: 500px;
+    margin-bottom: -20px;
+  }
+  
+  .sub-image {
+    width: 600px;
+    margin-bottom: -25px;
+  }
+  
+  .team-title {
+    font-size: 3rem;
+  }
+  
+  .data-sources {
+    padding: 130px;
+  }
+  
+  .data-text {
+    max-width: 40%;
+  }
+}
+
+/* Extra large devices (≥1280px) */
+@media (min-width: 80rem) {
+  .team-container {
+    gap: 60px;
+  }
+  
+  .mission-vision {
+    gap: 80px;
+  }
+  
+  .mv-card {
+    width: 450px;
+  }
+}
+
+/* 2XL devices (≥1536px) */
+@media (min-width: 96rem) {
+  .about {
+    height: 70vh;
+  }
+  
+  .overlay-image {
+    width: 35%;
+  }
+  
+  .data-sources {
+    padding: 150px;
+  }
+  
+  .acknowledgment {
+    padding: 80px 120px;
+  }
+  
+  .ack-content {
+    max-width: 1100px;
+  }
+}
+
+/* Mobile-first approach - Small screens (max-width: 640px) */
+@media (max-width: 40rem) {
+  .about {
+    height: 55vh;
+    padding-top: 50px;
+    gap: 10px;
+  }
+  
+  .overlay-image {
+    width: 75%;
+    max-width: 280px;
+    margin-bottom: -15px;
+  }
+  
+  .sub-image {
+    width: 280px;
+    margin-bottom: -20px;
+  }
+  
+  .about-text {
+    font-size: 0.9rem;
+    padding: 0 15px;
+  }
+  
+  .team {
+    padding: 40px 15px;
+  }
+  
+  .team-title {
+    font-size: 2rem;
+  }
+  
+  .team-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .team-container {
+    gap: 30px;
+  }
+  
+  .team-card {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .mission-vision {
+    padding: 40px 15px;
+    gap: 40px;
+  }
+  
+  .mv-card {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .mv-title {
+    font-size: 1.8rem;
+    padding: 8px 20px;
+  }
+  
+  .data-sources {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+  
+  .data-text {
+    max-width: 100%;
+  }
+  
+  .data-text h2 {
+    font-size: 1.5rem;
+  }
+  
+  .data-text p {
+    font-size: 0.9rem;
+  }
+  
+  .data-logos {
+    gap: 30px;
+  }
+  
+  .logo-row {
+    gap: 20px;
+  }
+  
+  .logo-row a img {
+    width: 120px;
+  }
+  
+  .acknowledgment {
+    padding: 40px 20px;
+  }
+  
+  .acknowledgment h2 {
+    font-size: 1.5rem;
+  }
+  
+  .acknowledgment h3 {
+    font-size: 0.9rem;
+    margin-top: 50px;
+  }
+  
+  .ack-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet adjustments (between 640px and 768px) */
+@media (min-width: 40rem) and (max-width: 48rem) {
+  .data-sources {
+    flex-direction: column;
+    padding: 60px 40px;
+  }
+  
+  .data-text {
+    max-width: 100%;
+  }
+}

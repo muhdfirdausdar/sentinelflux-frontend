@@ -1,0 +1,73 @@
+#### Step 1: Start Netlify Functions (Required)
+First, start the Netlify development server to enable API functions:
+```bash
+# From the root directory
+netlify dev
+```
+This will start Netlify functions on `http://localhost:8888` 
+IT WILL AUTO OPEN IN BROWSER BUT DONT USE THIS FOR WORKING
+
+**⚠️ Do NOT use the Netlify URL for development**
+
+#### Step 2: Start React Development Server
+In a **new terminal**, start the React app:
+```bash
+cd frontend-react
+npm run dev  # or pnpm dev
+```
+
+IT WILL GIVE LOCAL LINK 
+
+http://localhost:5173/
+
+
+USE ABOVE LINK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The website use netlify functions to handle API requests and at the same time serve React app.
+
+To make sure the website can fetch the API it need to run the Netlify dev first. We need to do 2 steps:
+
+1. // at frontend(project root) directory eg: 
+   firdaus@mint27:~/frontend$ [command here]
+   
+   run command:
+
+   netlify dev
+
+2. after that, you can run the React at frontend-react/ 
+   eg: firdaus@mint27:~/frontend/frontend-react$ [command here]
+   
+   run command:
+
+   npm run dev
+
+
+to see the website in the browser, you need to use the URL given by npm run dev and 
+not the  URL given by netlify dev.
+
+eg:
+firdaus@mint27:~/frontend/frontend-react$ npm run dev
+
+> frontend-react@0.0.0 dev
+> vite
+
+
+  VITE v6.3.5  ready in 279 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help

@@ -1,0 +1,7 @@
+
+
+function CloseButton() {
+  return (
+    <X />
+  );
+}

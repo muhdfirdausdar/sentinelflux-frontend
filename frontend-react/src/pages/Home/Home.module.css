@@ -1,0 +1,16 @@
+/* Home page scoped styles */
+.homeContainer {
+  /* Example: override or extend .container styles for Home */
+  width: 100%;
+  margin: 0 auto;
+  height:100%;
+}
+
+.homeHeader {
+  /* Example: header styles for Home */
+  background: #f5f5f5;
+  padding: 2rem 0;
+  height: 100px;
+}
+
+/* Add more specific styles for Home page as needed */

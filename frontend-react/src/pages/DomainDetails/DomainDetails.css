@@ -1,0 +1,336 @@
+/* Domain Details Page Styles */
+.domain-details-page {
+  background-color: #0a1628;
+  min-height: 100vh;
+  color: #e2e8f0;
+  margin-top: 150px;
+}
+
+.domain-details-header {
+  padding: 20px;
+  background-color: #0f172a;
+  border-bottom: 1px solid #1e3a8a;
+}
+
+.domain-details-title {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.domain-id-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 1px solid #22c55e;
+}
+
+/* Tab Navigation Styles */
+.domain-tabs-container {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.domain-tabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.domain-tab {
+  position: relative;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  border: none;
+  color: #e0e7ff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transform: translateY(0);
+  margin-right: 4px;
+}
+
+.domain-tab:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  z-index: 10;
+}
+
+.domain-tab.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.domain-tab.active:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 3px 10px rgba(59, 130, 246, 0.5);
+}
+
+.domain-tab-indicator {
+  display: none;
+}
+
+/* Export Section */
+.domain-export-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 20px;
+}
+
+.domain-export-label {
+  color: #e0e7ff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.domain-export-button {
+  padding: 8px 20px;
+  background-color: transparent;
+  border: 1px solid #4f46e5;
+  color: #a5b4fc;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.domain-export-button:hover {
+  background-color: rgba(79, 70, 229, 0.2);
+  border-color: #6366f1;
+  color: #c7d2fe;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+}
+
+.domain-export-button:active {
+  transform: translateY(0);
+}
+
+.domain-export-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: rgba(79, 70, 229, 0.1);
+  border-color: #4f46e5;
+  color: #6b7280;
+}
+
+.domain-export-button:disabled:hover {
+  background-color: rgba(79, 70, 229, 0.1);
+  border-color: #4f46e5;
+  color: #6b7280;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Content wrapper */
+.domain-content-wrapper {
+  background-color: #0a1628;
+  min-height: 400px;
+}
+
+/* Loading and Error States */
+.domain-loading,
+.domain-error {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #0a1628;
+  min-height: 100vh;
+}
+
+.domain-loading h1,
+.domain-error h1 {
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.domain-error-message {
+  color: #fb923c;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.domain-error-instructions {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.domain-error-code {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  padding: 12px 16px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 12px;
+  font-family: 'Courier New', monospace;
+  border: 1px solid #334155;
+}
+
+/* Responsive Design - Tailwind Breakpoints */
+
+/* sm: Small devices (640px and up) */
+@media (width >= 40rem) { /* 640px */
+  .domain-details-page {
+    padding: 0 1rem;
+  }
+
+  .domain-details-title {
+    font-size: 22px;
+  }
+
+  .domain-tab {
+    padding: 14px 24px;
+  }
+}
+
+/* md: Medium devices (768px and up) */
+@media (width >= 48rem) { /* 768px */
+  .domain-details-page {
+    padding: 0 1.5rem;
+  }
+
+  .domain-details-title {
+    font-size: 24px;
+  }
+
+  .domain-tab {
+    padding: 16px 32px;
+    font-size: 14px;
+  }
+
+  .domain-tabs {
+    overflow-x: visible;
+  }
+
+  .domain-export-section {
+    display: flex;
+  }
+}
+
+/* lg: Large devices (1024px and up) */
+@media (width >= 64rem) { /* 1024px */
+  .domain-details-page {
+    padding: 0 2rem;
+  }
+
+  .domain-details-title {
+    font-size: 26px;
+  }
+
+  .domain-tab {
+    padding: 16px 36px;
+    font-size: 15px;
+  }
+
+  .domain-export-button {
+    padding: 9px 24px;
+    font-size: 14px;
+  }
+}
+
+/* xl: Extra large devices (1280px and up) */
+@media (width >= 80rem) { /* 1280px */
+  .domain-details-page {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2.5rem;
+  }
+
+  .domain-details-title {
+    font-size: 28px;
+  }
+
+  .domain-tab {
+    padding: 18px 40px;
+    font-size: 15px;
+  }
+
+  .domain-export-button {
+    padding: 10px 28px;
+    font-size: 14px;
+  }
+}
+
+/* 2xl: 2X large devices (1536px and up) */
+@media (width >= 96rem) { /* 1536px */
+  .domain-details-page {
+    max-width: 1536px;
+    padding: 0 3rem;
+  }
+
+  .domain-details-title {
+    font-size: 30px;
+  }
+
+  .domain-tab {
+    padding: 18px 44px;
+    font-size: 16px;
+  }
+
+  .domain-export-section {
+    gap: 16px;
+  }
+
+  .domain-export-button {
+    padding: 10px 32px;
+    font-size: 15px;
+  }
+}
+
+/* Mobile-first adjustments (below sm) */
+@media (width < 40rem) { /* Below 640px */
+  .domain-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .domain-tab {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .domain-details-title {
+    font-size: 18px;
+  }
+
+  .domain-export-section {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .domain-export-label {
+    font-size: 12px;
+  }
+
+  .domain-export-button {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+}

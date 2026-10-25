@@ -1,0 +1,81 @@
+.static-map-container {
+  /* Place map in normal document flow. Prefer to reserve header/footer space via
+     CSS variables so the page header/footer remain visible. If variables are not
+     set, fallback to 100vh. */
+  position: relative;
+  width: 100%;
+  height: calc(100vh - var(--app-header-height, 0px) - var(--app-footer-height, 0px));
+  min-height: 360px;
+  overflow: hidden;
+  display: block;
+}
+
+.static-map-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+/* Removed scroller wrapper — we render canvas directly in the container */
+
+/* Mobile behavior: make the map fill full viewport height and allow horizontal
+   scrolling so users can pan left/right while the height remains 100vh. */
+@media (max-width: 640px) {
+  .static-map-container {
+    height: 100vh; /* full mobile viewport height */
+    min-height: 100vh;
+  }
+
+  .static-map-scroller {
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x pan-y;
+  }
+
+  /* Canvas width is controlled by JS (zoomFactor) so we don't force a CSS percent
+     scale here — that caused scroll area mismatches. Keep the canvas display block. */
+  .static-map-scroller .static-map-canvas {
+    display: block;
+    height: 100%;
+  }
+}
+
+/* Extra horizontal zoom for very small devices (<=400px) */
+@media (max-width: 400px) {
+  /* no css percent width here; JS will set canvas.style.width based on zoom */
+}
+
+/* Responsive adjustments to reduce horizontal stretching on wide screens */
+@media (min-width: 768px) {
+  .static-map-container {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .static-map-container {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1400px) {
+  .static-map-container {
+    height: 100vh;
+  }
+}
+
+/* Tailwind 2xl breakpoint (~1536px) - give more vertical space on very large screens */
+@media (min-width: 1536px) {
+  .static-map-container {
+    height: 100vh;
+  }
+}
+
+/* lightweight point styles are drawn on canvas; keep CSS minimal */
+.graticule {
+  pointer-events: none;
+}
